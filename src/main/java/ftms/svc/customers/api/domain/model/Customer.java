@@ -1,4 +1,4 @@
 package ftms.svc.customers.api.domain.model;
 
-public class FtmsTransaction {
+public class Customer {
 }

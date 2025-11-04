@@ -1,6 +1,6 @@
 package ftms.svc.customers.api.controller;
 
-import ftms.svc.customers.api.constants.FtmsTransactionsApiConstants;
+import ftms.svc.customers.api.constants.FtmsCustomersApiConstants;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
@@ -14,8 +14,8 @@ import java.util.Map;
 @Validated
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(FtmsTransactionsApiConstants.FTMS_TRANSACTIONS_API_V1)
-public class FtmsTransactionsController {
+@RequestMapping(FtmsCustomersApiConstants.FTMS_CUSTOMERS_API_V1)
+public class FtmsCustomersController {
 
     /**
      * Returns basic health information of the service.
@@ -26,7 +26,7 @@ public class FtmsTransactionsController {
     public Map<String, String> health() {
         return Map.of(
                 "status", "UP",
-                "service", "FTMS Transactions Service",
+                "service", "FTMS Customers Service",
                 "version", "v1"
         );
     }
