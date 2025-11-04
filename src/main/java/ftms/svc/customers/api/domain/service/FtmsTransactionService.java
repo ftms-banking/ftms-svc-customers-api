@@ -1,4 +1,4 @@
 package ftms.svc.customers.api.domain.service;
 
-public interface FtmsCustomerService {
+public interface FtmsTransactionService {
 }

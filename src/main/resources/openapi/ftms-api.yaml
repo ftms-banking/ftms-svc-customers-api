@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: FTMS - Financial Transaction Management System API
+  title: FTMS - Financial FtmsTransaction Management System API
   description: |
     Enterprise-grade REST API for managing customers, accounts, transactions, and compliance.
     
@@ -46,11 +46,11 @@ tags:
   - name: Health
     description: System health and monitoring endpoints
   - name: Customers
-    description: Customer management and KYC operations
+    description: FtmsTransaction management and KYC operations
   - name: Accounts
     description: Account creation and management
   - name: Transactions
-    description: Transaction processing and history
+    description: FtmsTransaction processing and history
   - name: Compliance
     description: Compliance events and audit logs
 
@@ -112,7 +112,7 @@ paths:
                 country: USA
       responses:
         '201':
-          description: Customer created successfully
+          description: FtmsTransaction created successfully
           headers:
             Location:
               description: URL of the created customer
@@ -125,7 +125,7 @@ paths:
         '400':
           $ref: '#/components/responses/BadRequest'
         '409':
-          description: Customer with email already exists
+          description: FtmsTransaction with email already exists
           content:
             application/json:
               schema:
@@ -178,7 +178,7 @@ paths:
         - $ref: '#/components/parameters/CustomerId'
       responses:
         '200':
-          description: Customer found
+          description: FtmsTransaction found
           content:
             application/json:
               schema:
@@ -202,7 +202,7 @@ paths:
               $ref: '#/components/schemas/CustomerUpdateRequest'
       responses:
         '200':
-          description: Customer updated successfully
+          description: FtmsTransaction updated successfully
           content:
             application/json:
               schema:
@@ -231,7 +231,7 @@ paths:
               additionalProperties: true
       responses:
         '200':
-          description: Customer updated successfully
+          description: FtmsTransaction updated successfully
           content:
             application/json:
               schema:
@@ -316,7 +316,7 @@ paths:
         '400':
           $ref: '#/components/responses/BadRequest'
         '404':
-          description: Customer not found
+          description: FtmsTransaction not found
           content:
             application/json:
               schema:
@@ -450,7 +450,7 @@ paths:
               type: TRANSFER
       responses:
         '201':
-          description: Transaction created successfully
+          description: FtmsTransaction created successfully
           content:
             application/json:
               schema:
@@ -522,7 +522,7 @@ paths:
         - $ref: '#/components/parameters/TransactionId'
       responses:
         '200':
-          description: Transaction found
+          description: FtmsTransaction found
           content:
             application/json:
               schema:
@@ -610,7 +610,7 @@ components:
       name: customerId
       in: path
       required: true
-      description: Customer UUID
+      description: FtmsTransaction UUID
       schema:
         type: string
         format: uuid
@@ -628,7 +628,7 @@ components:
       name: transactionId
       in: path
       required: true
-      description: Transaction UUID
+      description: FtmsTransaction UUID
       schema:
         type: string
         format: uuid
