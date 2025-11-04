@@ -67,6 +67,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Swagger Annotations -->
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>2.2.21</version> <!-- adjust to latest -->
+		</dependency>
+
+		<!-- Jackson Nullable (used by OpenAPI Generator) -->
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>0.2.6</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
